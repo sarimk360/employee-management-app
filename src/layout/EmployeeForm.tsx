@@ -176,49 +176,6 @@ export default function EmployeeForm({ onSubmit, isOpen, setIsOpen }: Props) {
                 </FormItem>
               )}
             />
-            {/* <FormField
-              control={form.control}
-              name='role'
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>Role</FormLabel>
-                  <FormControl>
-                    <Select
-                      onValueChange={field.onChange}
-                      value={field.value}
-                    >
-                      <SelectTrigger>
-                        <SelectValue placeholder='Select a role' />
-                      </SelectTrigger>
-                      <SelectContent>
-                        <SelectItem value='Developer'>Developer</SelectItem>
-                        <SelectItem value='Designer'>Designer</SelectItem>
-                        <SelectItem value='Manager'>Manager</SelectItem>
-                      </SelectContent>
-                    </Select>
-                  </FormControl>
-                </FormItem>
-              )}
-            />
-            <FormField
-              control={form.control}
-              name='joiningDate'
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>Joining Date</FormLabel>
-                  <FormControl>
-                    <Input
-                      type='date'
-                      {...field}
-                      className='w-full'
-                    />
-                  </FormControl>
-                  <div className='h-5'>
-                    <FormMessage />
-                  </div>
-                </FormItem>
-              )}
-            /> */}
             <div className='grid grid-cols-2 gap-4'>
               <FormField
                 control={form.control}

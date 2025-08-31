@@ -5,7 +5,7 @@ import { AgGridReact } from 'ag-grid-react';
 import type { ColDef } from 'ag-grid-community';
 import { AllCommunityModule, ModuleRegistry } from 'ag-grid-community';
 import { useMemo } from 'react';
-import { Trash, Trash2 } from 'lucide-react';
+import {Trash2 } from 'lucide-react';
 
 ModuleRegistry.registerModules([AllCommunityModule]);
 interface Props {
@@ -24,7 +24,6 @@ export default function EmployeeTable({ employees, onDelete }: Props) {
       sortable: true,
       valueFormatter: (params) => {
         if (!params.value) return '-';
-        // Convert YYYY-MM-DD to DD/MM/YYYY for display
         const dateParts = params.value.split(' ')[0].split('-');
         if (dateParts.length === 3) {
           const year = dateParts[0];
