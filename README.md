@@ -34,6 +34,16 @@ npm run dev
 
 ---
 
+## Login Credentials
+
+This app uses **Clerk** for authentication. To test the app, you can log in with the following credentials:
+
+- **Email:** sarimtest@gmail.com  
+- **Password:** Kolkata@#123
+
+> Note: Only this email account is registered in Clerk for testing. Other emails will not be able to access the app unless added in the Clerk dashboard.
+
+
 ## How I Approached the Task
 
 I followed the assignment step by step, learning each library and implementing features incrementally:
