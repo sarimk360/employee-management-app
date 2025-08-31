@@ -80,8 +80,8 @@ export default function EmployeeForm({ onSubmit, isOpen, setIsOpen }: Props) {
           phone: data.phone || 'N/A',
           role: data.role,
           joiningDate: data.joiningDate,
-          to_email: data.email,
-          title: 'EmailJs Testing',
+          title: 'Employee Submission',
+          time: new Date().toLocaleString(),
         },
         import.meta.env.VITE_EMAILJS_PUBLIC_KEY
       )
