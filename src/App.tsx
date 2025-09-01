@@ -35,10 +35,8 @@ function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   useEffect(() => {
-    if (typeof window !== 'undefined') {
-      const stored = localStorage.getItem('employees');
-      if (stored) setEmployees(JSON.parse(stored));
-    }
+    const stored = localStorage.getItem('employees');
+    if (stored) setEmployees(JSON.parse(stored));
   }, []);
 
   const handleAddEmployee = (data: EmployeeFormValues) => {
