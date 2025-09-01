@@ -40,12 +40,14 @@ const employeeSchema = z.object({
       'Phone must be 10–15 digits'
     ),
   role: z.enum(['Developer', 'Designer', 'Manager']),
-  joiningDate: z
-    .string()
-    .refine(
-      (val) => new Date(val) <= new Date(),
-      'Joining date must be today or in the past'
-    ),
+  joiningDate: z.string().refine((val) => {
+    if (!val) return false;
+    const selected = new Date(val);
+    const today = new Date();
+    selected.setHours(0, 0, 0, 0);
+    today.setHours(0, 0, 0, 0);
+    return selected <= today;
+  }, 'Joining date must be today or in the past'),
 });
 
 export type EmployeeFormValues = z.infer<typeof employeeSchema>;
