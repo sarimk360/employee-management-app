@@ -21,6 +21,10 @@ npm install
 Create a `.env` file in the project root:
 
 ```env
+# Clerk (Authentication)
+VITE_CLERK_PUBLISHABLE_KEY=your_clerk_publishable_key
+
+# EmailJS (Email sending)
 VITE_EMAILJS_SERVICE_ID=your_service_id
 VITE_EMAILJS_TEMPLATE_ID=your_template_id
 VITE_EMAILJS_PUBLIC_KEY=your_public_key
